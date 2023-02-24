@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PlanListComponent } from './audit_plan/plan-list/plan-list.component';
-import { AnualPlanListComponent } from './components/audit-plan/anual-plan-list/anual-plan-list.component';
-import { AnualPlanComponent } from './components/audit-plan/anual-plan/anual-plan.component';
-import { PlanDetailsComponent } from './components/audit-plan/plan-details/plan-details.component';
+import { AnualPlanListComponent } from './components/audit/audit-plan/anual-plan-list/anual-plan-list.component';
+import { AnualPlanComponent } from './components/audit/audit-plan/anual-plan/anual-plan.component';
+import { PlanDetailsComponent } from './components/audit/audit-plan/plan-details/plan-details.component';
 import { HomeComponent } from './layout/home/home.component';
 import { MainContentWrapperComponent } from './layout/main-content-wrapper/main-content-wrapper.component';
 import { LoginComponent } from './security/login/login.component';

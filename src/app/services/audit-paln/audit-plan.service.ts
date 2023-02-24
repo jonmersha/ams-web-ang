@@ -10,9 +10,7 @@ export class AuditPlanService {
   private apiUrl=`${API_BASE_URL}/plan/view`;
   constructor(private http: HttpClient) { }
 
-
   getData(): Observable<any> {
-   // console.log(this.apiUrl)
     return this.http.get(`${this.apiUrl}`);
   }
 }

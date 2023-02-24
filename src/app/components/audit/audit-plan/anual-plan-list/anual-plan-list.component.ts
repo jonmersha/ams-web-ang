@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Observable, ObservableInput } from 'rxjs';
 import { AuditPlanService } from 'src/app/services/audit-paln/audit-plan.service';
 
@@ -9,17 +9,13 @@ import { AuditPlanService } from 'src/app/services/audit-paln/audit-plan.service
   styleUrls: ['./anual-plan-list.component.sass']
 })
 export class AnualPlanListComponent implements OnInit{
-  plan:any;
+  @Input() plan:any;
 
-  constructor(private planListServiec:AuditPlanService){
+  constructor(){
 
   }
   ngOnInit(){
-   this.planListServiec.getData().subscribe(resp=>{
-    this.plan=resp.data;
-    console.log(this.plan);
-
-   })
+   
    
   }
   getString(data:any){

@@ -8,11 +8,14 @@ import { API_BASE_URL } from 'src/app/constants';
 })
 export class AuditObjectService {
 
-  private apiUrl=`${API_BASE_URL}/object/get`;
+  private apiUrl=`${API_BASE_URL}/object/get/`;
   constructor(private http: HttpClient) { }
 
   getData(): Observable<any> {
-   // console.log(this.apiUrl)
     return this.http.get(`${this.apiUrl}`);
+  }
+  
+  getDataById(id:any): Observable<any> {
+    return this.http.get(`${this.apiUrl}id/?id=${id}`);
   }
 }

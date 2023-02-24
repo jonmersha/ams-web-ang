@@ -19,7 +19,7 @@
         <!-- Audit Year -->
         <div class="form-group">
           <label>Audit Year</label>
-          <app-combo-items  [control]="audit_subject" [url]="'/setting/year/get'" ></app-combo-items>
+          <app-combo-items  [control]="audit_year" [url]="'/setting/year/get'" ></app-combo-items>
         </div>
         <!-- Audit Subject -->
         <div class="form-group">
@@ -29,7 +29,7 @@
         <!-- Auditees -->
         <div class="form-group">
           <label>Auditees</label>
-          <app-combo-items  [control]="audit_subject" [url]="'/ou/get'" ></app-combo-items>
+          <app-combo-items  [control]="auditees" [url]="'/ou/get'" ></app-combo-items>
         </div>
 
       </div>
@@ -37,15 +37,15 @@
       <div class="col-md-6">
         <div class="form-group">
           <label>Audit Team</label>
-          <app-combo-items  [control]="audit_subject" [url]="'/type/get'" ></app-combo-items>
+          <app-combo-items  [control]="audit_type" [url]="'/type/get'" ></app-combo-items>
         </div>
         <div class="form-group">
-          <label for="exampleInputEmail1">Risk Level</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Risk Level">
+          <label for="exampleInputEmail1">Risk Score</label>
+          <input type="number" class="form-control" [formControl]="risk_score" placeholder="Risk Score">
         </div>
         <div class="form-group">
           <label>Risk Level</label>
-          <app-combo-items  [control]="audit_subject" [url]="'/setting/risk/get'" ></app-combo-items>
+          <app-combo-items  [control]="risk_level" [url]="'/setting/risk/get'" ></app-combo-items>
         </div>
       </div>
      
@@ -53,11 +53,11 @@
   </div>
 </div>
 <div class="card-footer">
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary" (click)="addAnualPlan()">add</button>
 </div>
 <div class="card-header">
   <h3 class="card-title">Annual Plan List</h3>
 </div>
-<app-anual-plan-list></app-anual-plan-list>
+<app-anual-plan-list [plan]="planList"></app-anual-plan-list>
 
 
